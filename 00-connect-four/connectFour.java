@@ -17,23 +17,25 @@ public class connectFour {
     turn = round%2;
     Scanner s = new Scanner(System.in);
     if(turn == 1) {
+      //tells whose turn it is
       player = "player 1";
     } else {
       player = "player 2";
     }
     System.out.println(player + " where would you like to place your piece?");
     int userColumn = s.nextInt();
-
+    //if the number is out of range, send a message
     while(userColumn < 1 || userColumn > 7) {
-      System.out.println("Your column is out of range, choose a different number");
-      System.out.println(player + " where would you like to place your piece?");
+      System.out.println("Your column is out of range, choose a different column");
       userColumn = s.nextInt();
     }
-
+    //clears the terminal
     System.out.print("\033[H\033[2J");
-
-    // round++;
-    // turn = round%2;
+    //if the column is filled, file a complaint
+    if(board[0][userColumn-1] != "[ ]") {
+      System.out.println("This column is filled, choose a different column");
+      userColumn = s.nextInt();
+    }
 
    row = placePieces(userColumn, board, turn);
    //winCondition(userColumn, row, board, turn);
@@ -41,7 +43,6 @@ public class connectFour {
    if((0 == horizontal(userColumn, row, board, turn)) || 0 == (vertical(userColumn, row, board, turn)) || 0 == (negDiagonal(userColumn, row, board, turn)) || 0 == (posDiagonal(userColumn, row, board, turn))) {
      loop = 0;
    }
-   System.out.println(row);
    displayBoard(board);
     }
   } // end main method
