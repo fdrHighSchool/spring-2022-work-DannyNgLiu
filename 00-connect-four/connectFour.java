@@ -5,7 +5,7 @@ public class connectFour {
     String[][] board = new String[6][7];
 
     int turn = 1;
-
+    String player = "";
     int row = 0;
     int round = 0;
     int loop = 1;
@@ -13,12 +13,27 @@ public class connectFour {
     fillBoard(board);
     displayBoard(board);
     while(loop == 1) {
-    Scanner s = new Scanner(System.in);
-    System.out.println("Which column would you like to place your piece?");
-    int userColumn = s.nextInt();
-
     round++;
     turn = round%2;
+    Scanner s = new Scanner(System.in);
+    if(turn == 1) {
+      player = "player 1";
+    } else {
+      player = "player 2";
+    }
+    System.out.println(player + " where would you like to place your piece?");
+    int userColumn = s.nextInt();
+
+    while(userColumn < 1 || userColumn > 7) {
+      System.out.println("Your column is out of range, choose a different number");
+      System.out.println(player + " where would you like to place your piece?");
+      userColumn = s.nextInt();
+    }
+
+    System.out.print("\033[H\033[2J");
+
+    // round++;
+    // turn = round%2;
 
    row = placePieces(userColumn, board, turn);
    //winCondition(userColumn, row, board, turn);
