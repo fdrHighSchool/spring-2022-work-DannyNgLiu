@@ -32,7 +32,7 @@ public class connectFour {
     //clears the terminal
     System.out.print("\033[H\033[2J");
     //if the column is filled, file a complaint
-    if(board[0][userColumn-1] != "[ ]") {
+    while(board[0][userColumn-1] != "[ ]") {
       System.out.println("This column is filled, choose a different column");
       userColumn = s.nextInt();
     }
