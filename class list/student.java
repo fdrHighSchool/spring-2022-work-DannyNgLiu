@@ -13,23 +13,34 @@ public student(String id, String n, boolean closeContact, int[] g) {
 }
 //behavior methods
 //get the close contact status of the student
-public boolean isCloseContact() {
-
-} // end isCloseContact methods
-
+// public boolean isCloseContact() {
+//
+// } // end isCloseContact methods
+//
 //set the value of close closeContact
-public void setCloseContact(boolean value) {
-
+public boolean getCloseContact() {
+  if(this.closeContact) {
+    return true;
+  } else {
+    return false;
+  }
 }
-
-//see if the student is failing
-public boolean isFailing() {
-
-}
-
+//
+// //see if the student is failing
+// public boolean isFailing() {
+//
+// }
+//
 //get object's name
 public String getName() {
-
+  return this.name;
 }
 
+public double getAverage() {
+  int total = 0;
+  for(int grade : this.grades) {
+      total += grade;
+    }
+    return total / grades.length;
+  }
 }
