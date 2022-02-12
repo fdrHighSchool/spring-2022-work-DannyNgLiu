@@ -1,46 +1,52 @@
 public class student {
-private  String id;
-private String name;
-private boolean closeContact;
-private int[] grades;
+  // fields, instance varaibles (data)
+  // each instance of the Student class gets a copy of each variable
+  private String id;
+  private String name;
+  private boolean closeContact;
+  private int[] grades;
 
-//constructor method
-public student(String id, String n, boolean closeContact, int[] g) {
-  this.id = id;
-  this.name = n;
-  this.closeContact = closeContact;
-  this.grades = g;
-}
-//behavior methods
-//get the close contact status of the student
-// public boolean isCloseContact() {
-//
-// } // end isCloseContact methods
-//
-//set the value of close closeContact
-public boolean getCloseContact() {
-  if(this.closeContact) {
-    return true;
-  } else {
+  // constuctor method
+  public student(String id, String n, boolean cc, int[] g) {
+    this.id = id;
+    this.name = n;
+    this.closeContact = cc;
+    this.grades = g;
+  }
+
+  // behaviors (methods)
+
+  // get the close contact status of the student
+  public boolean getCloseContact() {
+    return this.closeContact;
+  } // end isCloseContact method
+
+  // set the value of close contact
+  public boolean setCloseContact(boolean value) {
+    if(value == false) {
+      this.closeContact = true;
+    }
+    return this.closeContact;
+  }
+
+  // see if the student is failing
+  public boolean isFailing() {
+
     return false;
   }
-}
-//
-// //see if the student is failing
-// public boolean isFailing() {
-//
-// }
-//
-//get object's name
-public String getName() {
-  return this.name;
-}
 
-public double getAverage() {
-  int total = 0;
-  for(int grade : this.grades) {
-      total += grade;
-    }
-    return total / grades.length;
+  // get object's name value
+  public String getName() {
+    return this.name;
   }
+
+  public double getAverage() {
+    int total = 0;
+
+    for (int grade : this.grades) {
+      total += grade;
+    } // end for-each loop
+    return total / grades.length;
+  } // end getAverage method
+
 }
