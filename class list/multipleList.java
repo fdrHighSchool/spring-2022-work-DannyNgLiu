@@ -36,8 +36,7 @@ public class multipleList {
     student student3 = new student("1357911", "Jamal Jenkins", false, new int[] {85, 85, 95, 100, 90});
     student student4 = new student("2468101", "Ramiz Ahmed", true, new int[] {90, 100, 75, 85, 90});
     student student5 = new student("1928374", "Michael Green", true, new int[] {80, 80, 65, 55, 90});
-
-
+    student student0 = new student("9876543", "Jimmy Smith", new int[] {90, 80, 95, 90, 100});
 
     // calling getter methods to display data
 
@@ -46,18 +45,20 @@ public class multipleList {
     // System.out.println(student2.setCloseContact(false));
 
     // decision making based off of data attached to the object
-    if (student1.getCloseContact()) {
+    if (student0.getCloseContact()) {
       System.out.println("Please report to the auditorium for your take-home COVID test");
     }
     else {
       System.out.println("You are not a close contact, keep masking! Get boosted!");
     }
 
-  for(int i=1; i<6; i++) {
-    if(student1.getCloseContact()) {
-      System.out.println(student1.getName());
-    }
-  }
+    student0.setCloseContact(true);
+    System.out.println(student0.getCloseContact());
+  // for(int i=1; i<6; i++) {
+  //   if(student1.getCloseContact()) {
+  //     System.out.println(student1.getName());
+  //   }
+  // }
 
 
 

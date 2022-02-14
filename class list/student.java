@@ -14,6 +14,14 @@ public class student {
     this.grades = g;
   }
 
+
+  public student(String id, String n, int[] g) {
+    this.id = id;
+    this.name = n;
+    this.closeContact = false;
+    this.grades = g;
+  }
+
   // behaviors (methods)
 
   // get the close contact status of the student
@@ -22,11 +30,8 @@ public class student {
   } // end isCloseContact method
 
   // set the value of close contact
-  public boolean setCloseContact(boolean value) {
-    if(value == false) {
-      this.closeContact = true;
-    }
-    return this.closeContact;
+  public void setCloseContact(boolean value) {
+      this.closeContact = value;
   }
 
   // see if the student is failing
