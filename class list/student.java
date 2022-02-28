@@ -54,4 +54,7 @@ public class student {
     return total / grades.length;
   } // end getAverage method
 
+  public String toString() {
+    return this.name + ": " + this.id;
+  }
 }

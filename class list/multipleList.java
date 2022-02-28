@@ -54,6 +54,7 @@ public class multipleList {
 
     student0.setCloseContact(true);
     System.out.println(student0.getCloseContact());
+    System.out.println(student0.toString());
   // for(int i=1; i<6; i++) {
   //   if(student1.getCloseContact()) {
   //     System.out.println(student1.getName());
