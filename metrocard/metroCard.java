@@ -1,9 +1,11 @@
 public class metroCard {
-  public static void main(String[] args) {
-    tester normalCard = new tester("3/27/2022", 5.50);
-    tester otherCard = new tester(3, "6/18/2023", "student");
-
-    normalCard.normalSwipe();
-    normalCard.normalSwipe();
+  public static void main(String[] args){
+    tester metro1 = new tester(5.50, "student");
+    System.out.println(metro1.getBal());
+    metro1.useSwipe();
+    System.out.println(metro1.getName());
+    System.out.println(metro1.getBal());
+    System.out.println(metro1.getSwipe());
+    System.out.println(metro1.getExpiration());
   }
 }
