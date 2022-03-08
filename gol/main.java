@@ -1,6 +1,5 @@
-public class gameOfLife {
+public class main {
   public static void main(String[] args) {
     String[][] map = new String[100][75];
-    System.out.println(map.deepToString());
   }
 }
