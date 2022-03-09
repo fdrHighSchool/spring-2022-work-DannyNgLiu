@@ -7,9 +7,12 @@ public class board {
     this.y = y;
   }
 
-public void createBoard() {
-  String[][] map = new String[this.x][this.y];
+  public void createBoard() {
+    String[][] map = new String[this.x][this.y];
 }
 
+  public void displayBoard() {
+    
+  }
 
 }
