@@ -1,5 +1,12 @@
 public class main {
   public static void main(String[] args) {
-    String[][] map = new String[100][75];
+
+  //creating the board
+  board canvas = new board(10,10);
+  canvas.createBoard();
+  
+    for(int i=0; i<map[].length;i++) {
+
+    }
   }
 }
