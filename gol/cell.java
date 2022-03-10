@@ -51,8 +51,8 @@ public class cell {
     }
 
 
-    public String setStatus() {
-      if
+    public void setStatus() {
+      this.status = this.status * -1;
     }
   }
 }
