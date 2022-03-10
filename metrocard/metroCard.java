@@ -1,6 +1,6 @@
 public class metroCard {
   public static void main(String[] args){
-    tester metro1 = new tester(5.50, "student");
+    card metro1 = new card(5.50, "normal");
     System.out.println(metro1.getBal());
     metro1.useSwipe();
     System.out.println(metro1.getName());
