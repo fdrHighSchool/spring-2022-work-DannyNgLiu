@@ -1,49 +1,31 @@
 public class cell {
-  private int x;
-  private int y;
-  private int status;
+  private String status;
   private array board;
 
-  public cell(int x, int y, int status, array board) {
-    this.x = x;
-    this.y = y;
+  public cell(int x, int y, String status, array board) {
     this.status = status;
     this.array = array;
   }
 
-    public String getStatus() {
-      if(this.status == 0) {
-        return "X"; //dead
+    public int getStatus() {
+      if(this.status.equals("O")) {
+        return 1; //alive
       }
-        return "O"; //alive
+        return -1; //dead
       }
     }
 
-    public int centerNeighbor() {
-      int counter = 0;
-      if(board[this.x-1][this.y-1].equals("O")) {
-        counter++;
-      }
-      if(board[this.x][this.y-1].equals("O")) {
-        counter++;
-      }
-      if(board[this.x+1][this.y-1].equals("O")) {
-        counter++;
-      }
-      if(board[this.x+1][this.y-1].equals("O")) {
-        counter++;
-      }
-      if(board[this.x-1][this.y-1].equals("O")) {
-        counter++;
-      }
-      if(board[this.x][this.y-1].equals("O")) {
-        counter++;
-      }
-      if(board[this.x+1][this.y-1].equals("O")) {
-        counter++;
-      }
-      if(board[this.x+1][this.y-1].equals("O")) {
-        counter++;
+    public int countNeighbor(int x, int y, String[][] board) {
+      for(int i = -1; i<=1; i++) {
+        for(int q = -1; q<=1; q++) {
+          if(board[x+i][y+q].getStatus == 1) {
+            counter++;
+          }
+          if(board[x][y].getStatus == 1) {
+            counter--;
+          }
+        }
+
       }
 
     public int condition() {
