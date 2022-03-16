@@ -23,5 +23,8 @@ public class Deck {
       System.out.println(c);
     }
   }
+  public ArrayList getDeck() {
+    return this.deck;
+  }
 
 } // end class
