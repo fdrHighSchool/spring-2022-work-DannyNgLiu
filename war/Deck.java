@@ -36,4 +36,15 @@ public class Deck {
    }
    this.deck = shuffledDeck;
   }
+
+  public void split() {
+    ArrayList player1 = new ArrayList<Card>();
+    ArrayList player2 = new ArrayList<Card>();
+    for(int i = 0; i<26; i++) {
+      player1.add(this.deck.get(i));
+      player2.add(this.deck.get(i+25));
+    }
+    System.out.println(player1);
+    System.out.println(player2);
+  }
 } // end class
