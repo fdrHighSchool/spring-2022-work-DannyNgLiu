@@ -23,8 +23,17 @@ public class Deck {
       System.out.println(c);
     }
   }
-  public ArrayList getDeck() {
-    return this.deck;
-  }
 
+  public void shuffle() {
+    ArrayList<Card> shuffledDeck = new ArrayList<Card>();
+    int totalCardsLeft = 52;
+    int ranNum = 0;
+    for(int i = 0; i<52; i++) {
+    ranNum = (int)(Math.random()*totalCardsLeft);
+    shuffledDeck.add(this.deck.get(ranNum));
+    this.deck.remove(this.deck.get(ranNum));
+    totalCardsLeft -= 1;
+   }
+   this.deck = shuffledDeck;
+  }
 } // end class
