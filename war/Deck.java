@@ -47,4 +47,21 @@ public class Deck {
     System.out.println(player1);
     System.out.println(player2);
   }
+
+  public void outShuffle() {
+    ArrayList<Card> sub1 = new ArrayList<Card>();
+    ArrayList<Card> sub2 = new ArrayList<Card>();
+    for(int i = 0; i < 26; i++) {
+      sub1.add(this.deck.get(i));
+      sub2.add(this.deck.get(i+26));
+    }
+    int index = 51;
+    for(int i = 25; i > 0; i--) {
+      this.deck.set(index, sub1.get(i));
+      index--;
+      this.deck.set(index, sub2.get(i));
+      index--;
+    }
+    System.out.println(this.deck);
+  }
 } // end class
