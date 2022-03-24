@@ -10,6 +10,7 @@ public class Driver {
     //deck1.shuffle();
     deck1.displayDeck();
     //deck1.split();
-    deck1.outShuffle();
+    deck1.shuffle();
+    deck1.displayDeck();
   }
 }
