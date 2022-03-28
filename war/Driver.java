@@ -8,11 +8,12 @@ public class Driver {
     System.out.println(deck1.getLength()); // 52 cards in a standard deck
     //deck shuffle
     deck1.shuffle();
-    ArrayList<Card> p1 = new Arraylist<Card>();
-    ArrayList<Card> p2 = new Arraylist<Card>();
-    for(int i = 0; i<26; i++) {
-      p1.add(deck1.get(i));
-      p2.add(deck1.get(i+2));
-    }
+    ArrayList<Card> player1Hand = new Arraylist<Card>();
+    ArrayList<Card> player2Hand = new Arraylist<Card>();
+    System.out.println(deck1.get(1));
+    // for(int i = 0; i<26; i++) {
+    //   p1.add(deck1.get(i));
+    //   p2.add(deck1.get(i+2));
+    // }
   }
 }
